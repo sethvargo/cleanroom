@@ -6,7 +6,7 @@ Ruby Cleanroom
 [![Gittip](http://img.shields.io/gittip/sethvargo.svg)][gittip]
 
 [gem]: https://rubygems.org/gems/cleanroom
-[travis]: http://travis-ci.org/sethvargo/chef-suguar
+[travis]: http://travis-ci.org/sethvargo/cleanroom
 [codeclimate]: https://codeclimate.com/github/sethvargo/cleanroom
 [gittip]: https://www.gittip.com/sethvargo
 
