@@ -2,13 +2,11 @@ Ruby Cleanroom
 ==============
 [![Gem Version](http://img.shields.io/gem/v/cleanroom.svg)][gem]
 [![Build Status](http://img.shields.io/travis/sethvargo/cleanroom.svg)][travis]
-[![Dependency Status](http://img.shields.io/gemnasium/sethvargo/cleanroom.svg)][gemnasium]
 [![Code Climate](http://img.shields.io/codeclimate/github/sethvargo/cleanroom.svg)][codeclimate]
 [![Gittip](http://img.shields.io/gittip/sethvargo.svg)][gittip]
 
 [gem]: https://rubygems.org/gems/cleanroom
 [travis]: http://travis-ci.org/sethvargo/chef-suguar
-[gemnasium]: https://gemnasium.com/sethvargo/cleanroom
 [codeclimate]: https://codeclimate.com/github/sethvargo/cleanroom
 [gittip]: https://www.gittip.com/sethvargo
 
