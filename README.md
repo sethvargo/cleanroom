@@ -3,12 +3,10 @@ Ruby Cleanroom
 [![Gem Version](http://img.shields.io/gem/v/cleanroom.svg)][gem]
 [![Build Status](http://img.shields.io/travis/sethvargo/cleanroom.svg)][travis]
 [![Code Climate](http://img.shields.io/codeclimate/github/sethvargo/cleanroom.svg)][codeclimate]
-[![Gittip](http://img.shields.io/gittip/sethvargo.svg)][gittip]
 
 [gem]: https://rubygems.org/gems/cleanroom
 [travis]: http://travis-ci.org/sethvargo/cleanroom
 [codeclimate]: https://codeclimate.com/github/sethvargo/cleanroom
-[gittip]: https://www.gittip.com/sethvargo
 
 Ruby is an excellent programming language for creating and managing custom DSLs, but how can you securely evaluate a DSL while explicitly controlling the methods exposed to the user? Our good friends `instance_eval` and `instance_exec` are great, but they expose all methods - public, protected, and private - to the user. Even worse, they expose the ability to accidentally or intentionally alter the behavior of the system! The cleanroom pattern is a safer, more convenient, Ruby-like approach for limiting the information exposed by a DSL while giving users the ability to write awesome code!
 
