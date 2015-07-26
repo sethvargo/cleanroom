@@ -1,4 +1,6 @@
 require 'rspec'
+require 'fileutils'
+
 require 'cleanroom'
 
 RSpec.configure do |config|
