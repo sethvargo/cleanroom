@@ -160,7 +160,7 @@ module Cleanroom
   end
 
   #
-  # Instance Mehtods
+  # Instance Methods
   #
   module InstanceMethods
     #
