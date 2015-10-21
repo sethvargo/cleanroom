@@ -74,6 +74,9 @@ module Cleanroom
     # Expose the given method to the DSL.
     #
     # @param [Symbol] name
+    #   the name of the method to be exposed
+    # @param [Symbol] exposed_name
+    #   the name the exposed method is exposed as
     #
     def expose(name, exposed_name = name)
       unless public_method_defined?(name)
