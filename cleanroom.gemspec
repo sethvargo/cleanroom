@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
     write awesome code!
   EOH
   spec.homepage      = 'https://github.com/sethvargo/cleanroom'
-  spec.license       = 'Apache 2.0'
+  spec.license       = 'Apache-2.0'
 
   spec.required_ruby_version = '>= 1.9.3'
 
