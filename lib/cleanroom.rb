@@ -74,13 +74,16 @@ module Cleanroom
     # Expose the given method to the DSL.
     #
     # @param [Symbol] name
+    #   the name of the method to be exposed
+    # @param [Symbol] exposed_name
+    #   the name the exposed method is exposed as
     #
-    def expose(name)
+    def expose(name, exposed_name = name)
       unless public_method_defined?(name)
         raise NameError, "undefined method `#{name}' for class `#{self.name}'"
       end
 
-      exposed_methods[name] = true
+      exposed_methods[exposed_name] = name
     end
 
     #
@@ -101,7 +104,7 @@ module Cleanroom
     # @return [Class]
     #
     def cleanroom
-      exposed = exposed_methods.keys
+      exposed = exposed_methods
       parent = self.name || 'Anonymous'
 
       Class.new(Object) do
@@ -125,8 +128,8 @@ module Cleanroom
           end
         end
 
-        exposed.each do |exposed_method|
-          define_method(exposed_method) do |*args, &block|
+        exposed.each do |exposed_name, exposed_method|
+          define_method(exposed_name) do |*args, &block|
             __instance__.public_send(exposed_method, *args, &block)
           end
         end

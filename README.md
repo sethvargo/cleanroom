@@ -100,6 +100,18 @@ The use of the `expose` method has the added advantage of clearly identifying wh
 
 The method `private_method` is never accessible in the DSL or as part of the public API.
 
+The _name_ the exposed method is exposed _as_, can be overridden by passing a second argument to `expose`:
+
+```ruby
+class MyDSL
+  include Cleanroom
+
+  attr_accessor :name
+
+  expose :name=, :name
+end
+```
+
 ### Evaluating DSLs
 The cleanroom also includes the ability to more safely evaluate DSL files. Given an instance of a class, you can call `evaluate` or `evaluate_file` to read a DSL.
 

@@ -124,12 +124,21 @@ describe Cleanroom do
       expect { klass.expose(:no_method) }.to raise_error(NameError)
     end
 
+    it 'exposes a public method with a new name' do
+      expect { klass.expose(:public_method, :renamed_public_method) }.to_not raise_error
+      expect(klass.exposed_methods).to include(:renamed_public_method)
+    end
+
     it 'raises an exception if the method is protected' do
       expect { klass.expose(:protected_method) }.to raise_error(NameError)
     end
 
     it 'raises an exception if the method is private' do
       expect { klass.expose(:private_method) }.to raise_error(NameError)
+    end
+
+    it 'raises an exception if the method is private and renamed' do
+      expect { klass.expose(:private_method, :renamed_private_method) }.to raise_error(NameError)
     end
   end
 
